@@ -14,6 +14,12 @@ const newUser = async (req, res) => {
   return res.status(status).json({ message });
 };
 
+const AllUsers = async (req, res) => {
+  const users = await userService.allUsers();
+  return res.status(200).json(users);
+};
+
 module.exports = {
   newUser,
+  AllUsers,
 };
