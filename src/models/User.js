@@ -6,13 +6,14 @@ module.exports = (sequelize, DataTypes) => {
             autoIncrement: true,
             allowNull: false,
         },
-        display_name: DataTypes.STRING,
+        displayName: DataTypes.STRING,
         email: DataTypes.STRING,
         password: DataTypes.STRING,
-        image: DataTypes.STRING
+        image: DataTypes.STRING,
     }, {
         tableName: 'users',
         timestamps: false,
+        underscored: true,
     })
 
     return users;
