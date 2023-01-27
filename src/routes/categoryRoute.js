@@ -5,5 +5,6 @@ const categoryController = require('../controllers/categoryController');
 const route = Router();
 
 route.post('/', tokenValidation, categoryController.newCategory);
+route.get('/', tokenValidation, categoryController.allCategories);
 
 module.exports = route;
